@@ -8,7 +8,6 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="NougÆn">
-<meta http-equiv="refresh" content="0; url=https://fluorescent-satellite-2eb.notion.site/Noug-n-3cbd6a5e8d53804c88c3e4b9bb98dec8?source=copy_link">
 <style>
   :root{
     --bg: #0e0c0a;
@@ -56,11 +55,16 @@
 <div class="center">
   <img src="/apple-touch-icon.png" alt="NougÆn logo">
   <h1>NougÆn</h1>
-  <p>Notionへ移動しとるで…<br>
-  <a href="https://fluorescent-satellite-2eb.notion.site/Noug-n-3cbd6a5e8d53804c88c3e4b9bb98dec8?source=copy_link">飛ばんかったらここタップ</a></p>
+<p>ホーム画面から開くと自動でNotionに飛ぶで<br>
+  <a href="https://fluorescent-satellite-2eb.notion.site/Noug-n-3cbd6a5e8d53804c88c3e4b9bb98dec8?source=copy_link">今すぐNotionを開く</a></p>
 </div>
 <script>
-  window.location.replace("https://fluorescent-satellite-2eb.notion.site/Noug-n-3cbd6a5e8d53804c88c3e4b9bb98dec8?source=copy_link");
+  // ホーム画面から起動した時(standalone)だけ自動リダイレクト。
+  // Safariで普通に開いてる間はこのページに留まって、
+  // 「ホーム画面に追加」がこのページ自体を正しく捕まえられるようにする。
+  if (window.navigator.standalone === true) {
+    window.location.replace("https://fluorescent-satellite-2eb.notion.site/Noug-n-3cbd6a5e8d53804c88c3e4b9bb98dec8?source=copy_link");
+  }
 </script>
 </body>
 </html>
